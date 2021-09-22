@@ -1,0 +1,61 @@
+body {
+    background-color: #EAC926;
+}
+header {
+    font-family: 'Roboto', sans-serif;
+}
+
+header img {
+    margin: 25px 0px 25px 40px;
+    width: 150px;
+}
+
+.search {
+    text-align: left;
+    margin-left: 25px;
+}
+
+.aviso{
+    text-align: center;
+}
+
+.aviso p {
+    font-size: 12px;
+}
+
+ ul {
+    padding: 0px;
+} 
+header ul li {
+    list-style: none;
+}
+
+header ul li a{
+    text-decoration:none;
+    color: black;
+}
+
+section p {
+    font-size: 24px;
+}
+.precio {
+    font-size: 18px;
+}
+
+.descuento {
+    font-size: 16px;
+}
+section article h3 {
+    font-size: 16px;
+}
+
+.burger-menu {
+    text-align:center;
+    padding: 5px;
+    height: 17px;
+    width: 20px;
+    margin: 5px auto;
+    background-color: blue;
+    color: white;
+    border-radius: 3px;
+ }
