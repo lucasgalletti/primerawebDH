@@ -1,5 +1,6 @@
 body {
     background-color: #EAC926;
+
 }
 header {
     font-family: 'Roboto', sans-serif;
@@ -38,6 +39,10 @@ header ul li a{
 section p {
     font-size: 24px;
 }
+section img {
+    width: 360px;
+    text-align: center;
+}
 .precio {
     font-size: 18px;
 }
@@ -55,7 +60,29 @@ section article h3 {
     height: 17px;
     width: 20px;
     margin: 5px auto;
-    background-color: blue;
+    background-color: #1259c3;
     color: white;
     border-radius: 3px;
+ }
+
+ footer {
+     background-color: white;
+     text-align: center;
+     font-family: 'Roboto', sans-serif;
+     width: 360px;
+ }
+ footer i{
+     color: #1259c3;
+     font-size: 2em;
+     margin-bottom: 10px;
+     margin-top: 50px;
+ }
+ footer h3 {
+    margin: 0px;
+    font-size: 16px;
+    color: #666;
+ }
+ footer p {
+    margin: 0px;
+    color: #ebebeb;
  }
