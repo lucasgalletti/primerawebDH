@@ -1,30 +1,106 @@
+/*General*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}    
+a {
+    text-decoration: none;
+    color: white;
+}
+/*Cuerpo*/
 body {
-    background-color: #EAC926;
     font-family: 'Roboto', sans-serif;
+    background-color: #EAC926;
+}
+
+/*Cebecera - Inicio*/
+.main-header {
+    margin: 15px;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+
+}
+
+.main-header-logo-search  {
+    /* flex-grow: 6; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    width: 150px;
-    margin: 25px auto;
+   flex-grow: 5;
 }
+
 .logo img{
-    text-align: center;
+    width: 150px;
 }
 
 .search {
-    text-align: center;
-} 
-
-.aviso{
-    text-align: center;
+    flex-grow: 5;
+    text-align: right;
+    position: relative; 
 }
 
-.aviso p {
+.search input {
+    max-width: 160px;
+    height: 35px;
+    padding: 10px;
+    border-radius:  5px;
+    border-style: hidden;
+}
+
+.search i {
+    position: absolute;
+    width: 20px;
+    padding: 5px;
+    background-color: white;
+    right: 5px; 
+    top: 5px;
+}
+.main-header-aviso-burguer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aviso {
+    flex-grow: 5;
     font-size: 12px;
+    text-align: center;
+    padding: 15px;
 }
 
-ul {
+.burger-menu {
+    flex-grow: 5;
+    height: 30px;
+    width: 30px;
+    margin: 5px auto;
+    padding: 7px;
+    background-color: #1259c3;
+    color: white;
+    border-radius: 3px;
+ }
+
+ .main-header-verticalMenue {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .menuIzq {
+    flex-grow: 5;
+ }
+
+.menduDch {
+    flex-grow: 5;
+}
+
+ ul {
     padding: 0px;
+    display: none;
 } 
 
 header ul li {
@@ -35,41 +111,83 @@ header ul li a{
     text-decoration:none;
     color: black;
 }
+/*Cebecera - Fin*/
 
-.burger-menu {
-    text-align:center;
-    padding: 5px;
-    height: 17px;
-    width: 20px;
-    margin: 5px auto;
-    background-color: #1259c3;
-    color: white;
-    border-radius: 3px;
- }
+/*registro - inicio*/
 
-section p {
-    font-size: 24px;
-}
-
-section img {
+.banner img {
     width: 100%;
 }
 
-.precio {
-    font-size: 18px;
-    margin-bottom: 0px;
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+    padding: 15px;
+    max-width: 280px;
 }
 
-.descuento {
-    font-size: 16px;
-    margin-top: 0px;
+.domicilio {
+    max-width: 120px;
 }
 
-section article h3 {
-    font-size: 16px;
+.perfil {
+    max-width: 120px;
 }
+
+.perfil h3 {
+    width: 150px;
+}
+.categoria {
+    max-width: 150px;
+}
+
+.categoria h3 {
+    width: 170px;
+}
+.pass {
+    max-width: 170px;
+}
+
+.formulario button {
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(60, 185, 60);
+    border-radius: 5px;
+    border-style: none;
+
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+    padding: 35px;
+    max-width: 250px;
+}
+
+.login h3 {
+    text-align: center;
+}
+
+.login button {
+    width: 100px;
+    height: 30px;
+    align-self: center;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(60, 185, 60);
+    border-radius: 5px;
+    border-style: none;
+}
+
+/*registro - fin*/
+
+/*Main - Inicio*/
 main {
-    background-color: #ebebeb ;
+    background-color: #ebebeb;
 }
 
 main img {
@@ -79,25 +197,60 @@ main img {
 section {
     width: 90%;
     margin: auto;
+}
 
-    box-sizing: border-box;
+section p {
+    font-size: 24px;
+    margin: 10px auto;
 }
 
 article {
     margin-bottom: 10px;
 }
 
-.icono {
-    color: green;
-}
-
 .articulo{
     border-top: 1px solid #ebebeb;
     padding: 15px;
     background-color: white;
+    position: relative;
 }
 
+.precio-descuento {
+    display: flex;
+    justify-content: flex-start;
+}
 
+.precio {
+    font-size: 18px;
+    flex-grow: 3;
+}
+
+.descuento {
+    font-size: 16px;
+    color: rgb(60, 185, 60);
+    flex-grow: 7;
+}
+
+section article h3 {
+    font-size: 16px;
+    display: none;
+} 
+
+.icono {
+    color: rgb(60, 185, 60);
+    border: 1px solid rgb(60, 185, 60);
+    border-radius: 50%;
+    padding: 10px ; 
+    position: absolute;
+    top: -20px;
+    right: 20px ;
+    
+}
+
+/*Main - Fin*/
+
+
+/*Footer - Inicio*/
  footer {
      background-color: rgb(228, 228, 228);
      text-align: center;
@@ -146,21 +299,47 @@ article {
      text-align: left;
  }
 
- @media (max-width: 361px){
-     .articulo h3 {
-         display: none;
-     }
-     nav ul {
-         display: none;
-     }
- }
+ /*Footer - Fin*/
+
+/*Inico - mediaQuery*/
 
  @media (min-width: 361px){
-     article {
-        box-shadow: 0px 0px 10px gray;
-
+    .articulo h3{
+        display: initial;
+    } 
+    nav ul {
+        display: initial;
     }
+    
     .burger-menu {
         display: none;
     }
+
+    /* .main-header-verticalMenue {
+        display: initial;
+    } */
+
+    article {
+        box-shadow: 0px 0px 10px rgb(100 100 100);
+    }
+
  }
+
+ @media (min-width: 768px){
+    .seccion {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+ 
+    article {
+        max-width: 50%;
+    }
+
+ }
+ @media (min-width: 1024px){
+     article {
+         max-width: 25%;
+     }
+ }
+ /*Fin - mediaQuery*/
