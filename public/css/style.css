@@ -1,30 +1,36 @@
-/*General*/
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }    
+
 a {
     text-decoration: none;
-    color: white;
+    color: black;
+    font-family: 'Roboto', sans-serif;
 }
-/*Cuerpo*/
+
+li {
+    list-style: none;
+}
+
+p   {
+    font-size: 12px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #EAC926;
 }
 
-/*Cebecera - Inicio*/
+/*Cabecera - Inicio*/
+
+
 .main-header {
     margin: 15px;
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; */
-
 }
 
 .main-header-logo-search  {
-    /* flex-grow: 6; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,21 +51,34 @@ body {
 }
 
 .search input {
-    max-width: 160px;
+    width: 100%;
     height: 35px;
     padding: 10px;
     border-radius:  5px;
     border-style: hidden;
+
 }
 
-.search i {
+.search button {
     position: absolute;
-    width: 20px;
+    padding: 5px;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background-color: white;
+}
+
+/* .search i {
+    position: absolute;
+    width: 15px;
     padding: 5px;
     background-color: white;
     right: 5px; 
     top: 5px;
-}
+    margin-right: 5px;
+
+} */
+
 .main-header-aviso-burguer {
     display: flex;
     flex-direction: column;
@@ -85,113 +104,33 @@ body {
     border-radius: 3px;
  }
 
- .main-header-verticalMenue {
-     display: flex;
-     flex-wrap: wrap;
- }
-
- .menuIzq {
-    flex-grow: 5;
- }
-
-.menduDch {
-    flex-grow: 5;
-}
-
- ul {
-    padding: 0px;
+.main-header-verticalMenue {
     display: none;
-} 
-
-header ul li {
-    list-style: none;
 }
+/*Cabecera - Fin*/
 
-header ul li a{
-    text-decoration:none;
-    color: black;
+.banner {
+    width: auto;
 }
-/*Cebecera - Fin*/
-
-/*registro - inicio*/
-
 .banner img {
     width: 100%;
 }
 
-.formulario {
-    display: flex;
-    flex-direction: column;
-    margin: 5px auto;
-    padding: 15px;
-    max-width: 280px;
+.banner p {
+    margin: 15px;
+    font-size: 24px;
+    color: gray;
 }
 
-.domicilio {
-    max-width: 120px;
-}
-
-.perfil {
-    max-width: 120px;
-}
-
-.perfil h3 {
-    width: 150px;
-}
-.categoria {
-    max-width: 150px;
-}
-
-.categoria h3 {
-    width: 170px;
-}
-.pass {
-    max-width: 170px;
-}
-
-.formulario button {
-    width: 100px;
-    height: 30px;
-    margin-top: 20px;
-    color: white;
-    background-color: rgb(60, 185, 60);
-    border-radius: 5px;
-    border-style: none;
-
-}
-
-.login {
-    display: flex;
-    flex-direction: column;
-    margin: 5px auto;
-    padding: 35px;
-    max-width: 250px;
-}
-
-.login h3 {
-    text-align: center;
-}
-
-.login button {
-    width: 100px;
-    height: 30px;
-    align-self: center;
-    margin-top: 20px;
-    color: white;
-    background-color: rgb(60, 185, 60);
-    border-radius: 5px;
-    border-style: none;
-}
-
-/*registro - fin*/
-
-/*Main - Inicio*/
+/*main - inicio*/
 main {
     background-color: #ebebeb;
+
 }
 
-main img {
+article img {
     width: 100%;
+
 }
 
 section {
@@ -206,6 +145,14 @@ section p {
 
 article {
     margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 0px rgb(100 100 100);
+    transition: box-shadow 1s;
+
+}
+
+article:hover {
+    box-shadow: 0px 0px 10px rgb(100 100 100);
 }
 
 .articulo{
@@ -215,9 +162,12 @@ article {
     position: relative;
 }
 
+
+
 .precio-descuento {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .precio {
@@ -234,6 +184,7 @@ article {
 section article h3 {
     font-size: 16px;
     display: none;
+
 } 
 
 .icono {
@@ -244,102 +195,332 @@ section article h3 {
     position: absolute;
     top: -20px;
     right: 20px ;
+    transform: rotate(0deg);
+    transition: transform 1s;
     
 }
 
-/*Main - Fin*/
+.icono:hover {
+    transform: rotate(-90deg);
+}
 
+/*main - fin*/
+/*Registro - Inicio*/
+
+.formulario-registro {
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    flex-direction: column;
+    line-height: 30px;
+    width: 100%;
+}
+
+.formulario-registro input {
+    border-style: none;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.nacimiento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nacimiento label {
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.nacimiento input {
+    margin: 0px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.perfil h4 {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.perfil input {
+    margin-top: 0px;
+    height: initial;
+}
+
+.radio {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.intereses {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intereses h4 {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.intereses input {
+    margin-top: 0px;
+    height: initial;
+    width: 20%;
+}
+
+.checks {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.foto {
+    display: flex;
+    flex-direction: column;
+}
+.foto label {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.foto input {
+    padding: 0px;
+    margin: 5px 0px;
+    height: 30px;
+}
+
+.formulario-registro button{
+    width: 100px;
+    height: 30px;
+    margin: 20px 30px;
+    color: white;
+    background-color: #1259c3;
+    border-radius: 5px;
+    border-style: none;
+    transition: background-color 1s;
+}
+
+.formulario-registro button:hover {
+    background-color: #0022AA;
+}
+
+
+.formulario-registro a {
+    color: white;
+}
+/*Registro - fin*/
+
+/*Login - Inicio*/
+
+.login {
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    line-height: 35px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.login input {
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    padding: 10px;
+}
+
+.login button{
+    width: 80%;
+    height: 30px;
+    margin: 20px 30px;
+    color: white;
+    background-color: #1259c3;
+    border-radius: 5px;
+    border-style: none;
+    transition: background-color 1s;
+}
+
+.login button:hover {
+    background-color: #0022AA;
+}
+
+.login a {
+    color: white;
+}
+/*Login - Fin*/
 
 /*Footer - Inicio*/
- footer {
-     background-color: rgb(228, 228, 228);
-     text-align: center;
-     font-family: 'Roboto', sans-serif;
-     margin: 0px auto;
-
- }
-
- .down {
-     background-color: white;
-     text-align: center;
-     margin: auto 10px;
-     padding: 15px;
-    
-
- }
-
- footer i{
-     color: #1259c3;
-     font-size: 2em;
-     margin-bottom: 10px;
-     margin-top: 35px; 
- }
- footer h3 {
-    margin: 2px;
-    font-size: 16px;
-    color: #666;
-
- }
- .down2 {
+footer {
+    background-color: #ebebeb;
+    padding-top: 15px;
     text-align: center;
-    width: 100px;
- }
+    font-family: 'Roboto', sans-serif;
+    margin: -10px auto;
+}
 
- footer p {
-    margin: 2px;
-    color: #666;
+.tarjetas {
+    background-color: white;
+    text-align: center;
+    margin: auto 10px;
+    padding: 15px;
+}
+
+footer i{
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-top: 35px; 
+}
+
+footer h3 {
+   margin: 2px;
+   font-size: 16px;
+   color: #666;
+}
+
+footer p {
+   margin: 2px;
+   color: #666;
+   font-size: 12px;
+   margin: auto 35px ;
+
+}
+.copy {
     font-size: 12px;
-    margin: auto 35px ;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+}
 
- }
- .copy {
-     font-size: 12px;
-     margin-top: 15px;
-     margin-bottom: 10px;
-     text-align: left;
- }
+/*Footer - Fin*/
 
- /*Footer - Fin*/
+/*Inicio - mediaQuery mobile*/
 
-/*Inico - mediaQuery*/
+@media (min-width: 361px){
+    .main-header-verticalMenue {
+        display: flex;
+        font-size: 10px;
+        margin: 10px auto;
+    }
+ 
+    .menuIzq {
+        flex-grow: 7;
+   }
+   
+    .menuDch {
+        flex-grow: 3;
+    }
 
- @media (min-width: 361px){
-    .articulo h3{
-        display: initial;
-    } 
-    nav ul {
-        display: initial;
+    .menuDch .lista {
+        justify-content: flex-end;
+        margin-right: 15px;
     }
     
+    .lista {
+        display: flex;
+    }
+
+    .lista li {
+        margin-left: 15px;
+    }
+
     .burger-menu {
         display: none;
     }
 
-    /* .main-header-verticalMenue {
+   
+    .articulo:hover h3{
+        
         display: initial;
-    } */
 
-    article {
-        box-shadow: 0px 0px 10px rgb(100 100 100);
     }
 
- }
+    section article h3 {
+        display: none;
+    }
 
- @media (min-width: 768px){
-    .seccion {
+    section {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-    }
- 
-    article {
-        max-width: 50%;
+        justify-content: space-around;
+
     }
 
+    article {
+        width: 45%;
+    }
+    /* .formulario-registro{
+        background-color: #EAC926;
+    }
+    .form {
+        width: 80%;
+        background-color: #ebebeb;
+        margin-top: -11px;
+    }
+    .form input {
+        width: 80%;
+    }
+
+    .nacimiento label {
+        margin-top: 10px;
+        margin-left: 30px;
+    } */
  }
- @media (min-width: 1024px){
-     article {
-         max-width: 25%;
+
+ /*Fin MediaQuery Mobile*/
+
+ /*Inicio MediaQuery Desktop*/
+ @media (min-width: 768px){
+     .main-header {
+         display: flex;
+         justify-content: center;
+         align-items: center;
      }
- }
- /*Fin - mediaQuery*/
+
+     .main-header-logo-search {
+         flex-grow: 6;
+     }
+
+     .main-header-aviso-burguer {
+         flex-grow: 4;
+     }
+
+     .search input {
+         margin-left: 5px;
+     }
+
+     .aviso {
+         align-self: flex-end;
+     }
+
+     article {
+         width: 20%;
+     }
+
+     .precio, .descuento {
+         font-size: 14px;
+     }
+/* 
+     .form {
+        width: 60%;
+    } */
+
+ } 
+ /*Fin MediaQuery Desktop*/

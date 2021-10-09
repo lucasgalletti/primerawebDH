@@ -23,8 +23,13 @@ rel="stylesheet" />
                 </div>
                         
                 <div class="search">
+                    <form action="#search">
                     <input type="text" placeholder="Buscar productos, marcas" >
-                    <i class="fas fa-search"></i>
+                    
+                        <button type="submit"><i class="fas fa-search"></i>
+                        </button>
+                    
+                    </form>
                 </div>
             </div>
             <div class="main-header-aviso-burguer">
@@ -39,7 +44,7 @@ rel="stylesheet" />
         </div>
         <div class="main-header-verticalMenue">
             <nav class="menuIzq">
-                <ul>
+                <ul class="lista">
                     <li><a href="#ofertas">Ofertas</a></li>
                     <li><a href="#tiendas">Tiendas Oficiales</a></li>
                     <li><a href="#vender">Vender</a></li>
@@ -47,8 +52,8 @@ rel="stylesheet" />
                 </ul>
             </nav>
 
-            <nav>
-                <ul class="menuDch">
+            <nav class="menuDch">
+                <ul class="lista">
                     <li><a href="register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
                     <li><a href="login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
                     <li><a href="#miscompras">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
@@ -56,37 +61,50 @@ rel="stylesheet" />
             </nav>
         </div>
     </header>
-    <div class="banner">
-        <img src="/images/img-home-banner.jpg" alt="banner">
-    </div>
-    <form action="login.html" method="POST" class="login">
-        <h3>Ingreso</h3>
-        <br>
-        <label for="usuario">Usuario</label>
-            <input type="text" name="usuario">
-        <label for="pass">Contraseña</label>
-            <input type="password" name="pass">
-        <button type="submit"><a href="home">Enviar</a></button>
-    </form>
-    <div class="banner">
-        <img src="/images/img-home-banner.jpg" alt="banner">
-    </div>
-    <footer>
-        <div class="down">
-        <i class="fas fa-credit-card"></i>
-        <h3>Pagá con tarjeta o en efectivo</h3>
-            <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
-                puntos de pago. ¡Y siempre es seguro!</p>
-        <i class="fas fa-gift"></i>
-        <h3>Envío gratis desde $ 2.500</h3>
-            <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
-                productos. Es un beneficio de Mercado Puntos.</p>
-        <i class="fas fa-user-shield"></i>
-        <h3>Seguridad, de principio a fin</h3>
-            <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
-                porque estás siempre protegid@.</p>
-        <h3 class="copy">Copyright © 1999-2020 MercadoLiebre S.R.L.</h3>
-    </div>
-    </footer>
-</body>
+
+
+    <section class="login">
+
+        <div class="banner">
+            <img src="/images/img-home-banner.jpg" alt="banner">
+        </div>
+
+        <form action="login.html" method="POST">
+            <h3>Ingreso</h3>
+            <div class="user">
+                <input type="text" name="usuario" placeholder="Nombre de Usuario" required minlength="2">
+            </div>
+            <div class="passL">
+                <input type="password" name="pass" placeholder="Contraseña" required minlength="6">
+            </div>    
+
+            <button type="submit"><a href="home">Enviar</a></button>
+        </form>
+
+        <div class="banner">
+            <img src="/images/img-home-banner.jpg" alt="banner">
+        </div>
+
+    </section>
+
+
+
+        <footer>
+            <div class="tarjetas">
+            <i class="fas fa-credit-card"></i>
+            <h3>Pagá con tarjeta o en efectivo</h3>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                    puntos de pago. ¡Y siempre es seguro!</p>
+            <i class="fas fa-gift"></i>
+            <h3>Envío gratis desde $ 2.500</h3>
+                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                    productos. Es un beneficio de Mercado Puntos.</p>
+            <i class="fas fa-user-shield"></i>
+            <h3>Seguridad, de principio a fin</h3>
+                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+                    porque estás siempre protegid@.</p>
+            <h3 class="copy">Copyright © 1999-2020 MercadoLiebre S.R.L.</h3>
+        </div>
+        </footer>
+    </body>
 </html>
