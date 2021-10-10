@@ -68,17 +68,6 @@ body {
     background-color: white;
 }
 
-/* .search i {
-    position: absolute;
-    width: 15px;
-    padding: 5px;
-    background-color: white;
-    right: 5px; 
-    top: 5px;
-    margin-right: 5px;
-
-} */
-
 .main-header-aviso-burguer {
     display: flex;
     flex-direction: column;
@@ -375,7 +364,7 @@ footer {
     margin: -10px auto;
 }
 
-.tarjetas {
+.mediosPagos {
     background-color: white;
     text-align: center;
     margin: auto 10px;
@@ -466,22 +455,7 @@ footer p {
     article {
         width: 45%;
     }
-    /* .formulario-registro{
-        background-color: #EAC926;
-    }
-    .form {
-        width: 80%;
-        background-color: #ebebeb;
-        margin-top: -11px;
-    }
-    .form input {
-        width: 80%;
-    }
 
-    .nacimiento label {
-        margin-top: 10px;
-        margin-left: 30px;
-    } */
  }
 
  /*Fin MediaQuery Mobile*/
@@ -517,10 +491,24 @@ footer p {
      .precio, .descuento {
          font-size: 14px;
      }
-/* 
-     .form {
-        width: 60%;
-    } */
 
- } 
+    .mediosPagos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .opciones {
+        display: flex;
+    }
+
+    .opciones i:hover {
+        color: #EAC926;
+    }
+    
+    .mediosPagos h3 {
+        align-self: flex-start;
+    }
+
+
+}
  /*Fin MediaQuery Desktop*/
